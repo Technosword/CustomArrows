@@ -1,0 +1,6 @@
+name: CustomArrows
+version: '${project.version}'
+main: us.techno.customarrowsdemo.CustomArrowsDemo
+api-version: 1.18
+authors: [ Technosword ]
+description: A test plugin for the Dragon Commissions team!
