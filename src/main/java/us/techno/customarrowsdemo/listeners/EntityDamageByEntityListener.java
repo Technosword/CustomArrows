@@ -38,7 +38,7 @@ public class EntityDamageByEntityListener implements Listener {
                 if (livingEntity instanceof Monster) {
                     entity.getWorld().dropItem(entity.getLocation(), new ItemFactory(Material.DIAMOND)
                             .setAmount(15)
-                            .addLoreLine("Your reward for killing " + livingEntity.getCustomName() + "!")
+                            .addLoreLine("Your reward for killing " + livingEntity.getName() + "!")
                             .build());
                 } else {
                     entity.getWorld().dropItem(entity.getLocation(), new ItemFactory(Material.GOLD_INGOT)

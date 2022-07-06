@@ -1,5 +1,6 @@
 package us.techno.customarrowsdemo.listeners;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.SoundCategory;
 import org.bukkit.entity.Arrow;
@@ -79,7 +80,10 @@ public class BowShootListener implements Listener {
                 public void run() {
                     if (count[0] == 2) {
                         player.playSound(arrow.getLocation(), new InfinityArrow().getSounds().get(0), SoundCategory.NEUTRAL, 3f, 1);
+                        finalArrowItem.setAmount(1);
                         player.getInventory().addItem(finalArrowItem);
+                        player.updateInventory();
+                        player.sendMessage(ChatColor.GREEN + "Your infinity arrow has been returned to your inventory!");
                         arrow.remove();
                         cancel();
                         return;
